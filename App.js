@@ -46,8 +46,7 @@ const attendance = [
 type Props = {};
 export default class App extends Component<Props> {
   state = {
-    currentEvent:{},
-    page: "eventList",
+    page: "login",
     user: {
       rating: 4,
       name: "Sudqi Jawabra",
@@ -140,6 +139,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 30
+    marginTop: 30,
   }
 });
