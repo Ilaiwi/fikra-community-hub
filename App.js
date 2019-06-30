@@ -58,9 +58,9 @@ export default class App extends Component<Props> {
       {
         image:
           "https://ak2.picdn.net/shutterstock/videos/19294792/thumb/11.jpg",
-        title: "Machiene learning",
+        title: "Machine learning",
         description:
-          "Need some volunteers for Machiene learning workshop at Fikra!",
+          "Need some volunteers for Machine learning workshop at Fikra!",
         date: moment().add(2, "d"),
         hours: 2,
         attendance: [attendance[1]]
@@ -76,9 +76,9 @@ export default class App extends Component<Props> {
       },
       {
         image: "http://www.maannews.com/Photos/373562C.jpg",
-        title: "Marthoon origanizeers",
+        title: "Marathon origanizeers",
         description:
-          "We need people to help setup the right of movment marthoon",
+          "We need people to help setup the right of movment marathon",
         date: moment().subtract(2, "d"),
         hours: 8,
         attendance: attendance,
