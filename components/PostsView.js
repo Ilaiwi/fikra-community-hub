@@ -77,8 +77,8 @@ const styles = StyleSheet.create({
     paddingLeft: 10
   },
   img: {
-    width: 135,
-    height: 53
+    width: 500,
+    height: 500
   },
   item: {
     textAlign: "left"

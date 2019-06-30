@@ -14,7 +14,8 @@ import { COLOR, ThemeContext, getTheme } from "react-native-material-ui";
 import Attendance from "./components/Attendance";
 import EventListView from "./components/EventListView";
 import moment from "moment";
-
+import Event from "./components/Event";
+import { tsImportEqualsDeclaration } from "@babel/types";
 const attendance = [
   {
     rating: 4,
@@ -45,6 +46,7 @@ const attendance = [
 type Props = {};
 export default class App extends Component<Props> {
   state = {
+    currentEvent:{},
     page: "eventList",
     user: {
       rating: 4,
@@ -98,12 +100,18 @@ export default class App extends Component<Props> {
 
   handleAttend = (event) => {
     console.log(event)
+    this.setState({page:"event",currentEvent:event});
     //TODO: SEDQUI PLEASE FILL THIS OR I WILL KILL YOU
   }
   handleViewEvent = (event) => {
     
   }
+  handleJoin=(event)=>{
+    console.log(event);
+    this.state.events.filter((e)=>e.title==event.title)
+    event.attendance.append(this.state.user);
 
+  }
   handlePostSave = post => {};
 
   componentDidMount() {}
@@ -117,6 +125,9 @@ export default class App extends Component<Props> {
           ) : null}
           {this.state.page === "eventList" ? (
             <EventListView onAttend={this.handleAttend} onViewEvent={this.handleViewEvent} user={this.state.user} events={this.state.events} />
+          ) : null}
+          {this.state.page === "event" ? (
+            <Event attendances={attendance} event={this.state.currentEvent} onJoin={this.handleJoin}/>
           ) : null}
         </View>
       </ThemeContext.Provider>
