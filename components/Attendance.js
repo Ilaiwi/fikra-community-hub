@@ -32,7 +32,6 @@ export default ({ rating, name, image }) => {
 const styles = StyleSheet.create({
   constainer: {
     height: 50,
-    backgroundColor: "#7bb958",
     width: "100%",
     padding: 5,
     paddingLeft: 10,
