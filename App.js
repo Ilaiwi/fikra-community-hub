@@ -107,9 +107,18 @@ export default class App extends Component<Props> {
     
   }
   handleJoin=(event)=>{
-    console.log(event);
-    this.state.events.filter((e)=>e.title==event.title)
-    event.attendance.append(this.state.user);
+    this.setState(state => ({
+      page: 'eventList',
+      event: state.events.map(i => {
+        if(i.title === event.title){
+          return {
+            ...i,
+            attendance: i.attendance.push(this.state.user)
+          }
+        }
+        return i
+      })
+    }))
 
   }
   handlePostSave = post => {};

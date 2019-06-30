@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FlatList,StyleSheet, TextInput, Text, View, Image } from "react-native";
 import { Button } from "react-native-material-ui"
 import Attendance from "./Attendance";
-export default ({ attendances ,event,handleJoin}) => {
+export default ({ attendances ,event,onJoin}) => {
   const [username, changeUsername] = useState("");
   const [passowrd, changePassword] = useState("");
   const img1="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-male-avatar-maker.jpg"
@@ -24,7 +24,7 @@ export default ({ attendances ,event,handleJoin}) => {
         </View>
       } />
 
-      <Button sytle={styles.button} raised primary onPress={()=>handleJoin(event)} text="Join" />
+      <Button sytle={styles.button} raised primary onPress={()=>onJoin(event)} text="Join" />
     </View>
   );
 };
