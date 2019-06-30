@@ -46,6 +46,7 @@ const attendance = [
 type Props = {};
 export default class App extends Component<Props> {
   state = {
+    currentEvent:{},
     page: "login",
     user: {
       rating: 4,
